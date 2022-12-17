@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Font management */
+
+h1 {
+	font-family: 'Raleway';
+	font-style: normal;
+	color: #000000;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 26px;
+}
+
+h2, .list_title {
+	font-family: 'Raleway';
+	font-style: normal;
+	color: #000000;
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+p, .list_item, a {
+	font-family: 'Raleway', sans-serif;
+	font-style: normal;
+	color: #000000;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mobile_research_bar {
+	display: none;
+}
+
+/* Icons colors */
+
+ .blue_star {
+	color: #0065FC;
+}
+
+.grey_star {
+	color: #F2F2F2;
+} 
+
+.fa-solid {
+	color: #0065FC;
+}

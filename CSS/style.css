@@ -1,32 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 
-/* Font management */
 
-h1 {
+body {
+	padding: 0px 55px;
+	margin: 0;
+}
+
+/********************* Font management *********************/
+
+body {
 	font-family: 'Raleway';
 	font-style: normal;
-	color: #000000;
+	color: #000000;	
+}
+
+h1 {
 	font-weight: 700;
 	font-size: 22px;
 	line-height: 26px;
 }
 
-h2, .list_title {
-	font-family: 'Raleway';
-	font-style: normal;
-	color: #000000;
+.filter_title, .list_title, input {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;	
+}
+
+.fitler_name {
 	font-weight: 700;
 	font-size: 17px;
 	line-height: 20px;
 }
 
-p, .list_item, a {
-	font-family: 'Raleway', sans-serif;
-	font-style: normal;
-	color: #000000;
+.item_price {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;	
+}
+
+.list_item, p {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 19px;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;	
+}
+
+.nav_categorie {
+	color: #000000;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration: none;		
+}
+
+form button {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: #FFFFFF;
+}
+
+.filter_name {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 20px;
+}
+
+/********************* Header *********************/
+
+header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+}
+
+.menu_cat {
+	padding: 48px 25px;
+}
+
+.nav_categorie {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.menu_cat:hover {
+	border-top: 2px solid #0065FC;
+	padding-top: 46px;
+}
+
+.menu_cat:hover a {
+	color: #0065FC;
+} 
+
+.nav_categorie:visited {
+	color: #000000;
+}
+
+#logo {
+	min-width: 382px;
+	flex-grow: 1;
+}
+
+#logo img {
+	width: 61px;
+	height: 19px;
+	margin: 44px 0px;
+}
+
+/********************* Research Bar *********************/
+
+form {
+	display: grid;
+	grid-template-columns: 50px 232px 50px 90px;
+}
+
+form label {
+	display: inline-block;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	padding: 16px 0px;
+	background-color: #F2F2F2;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.fa-location-dot {
+	font-size: 18px;
+}
+
+form input {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	padding: 14px 0 14px 17px;
+	border: 1px solid #F2F2F2;
+	border-radius: 0px;
+}
+
+form button {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	background-color: #0065FC;
+	border-radius: 0 15px 15px 0;
+	border: none;
 }
 
 ul {
@@ -39,9 +165,115 @@ ul {
 	display: none;
 }
 
+/********************* Filters *********************/
+
+#filters, .filter_itemS, .filter_item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#filters {
+	margin: 30px 0 40px 0;
+}
+
+.filter_item {
+	border: 2px solid #D9D9D9;
+	border-radius: 25px;
+	padding: 12px 20px;	
+	box-sizing: border-box;
+	margin: 0 0 0 50px;
+}
+
+p.filter_name {
+	margin: 0 0 0 10px;
+}
+
+article.filter_item i.icon {
+	font-size: 22px;
+}
+
+/********************* Information *********************/
+
+.fa-info {
+	font-size: 10px;
+}
+
+.info_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 25px;
+	width: 25px;
+	border:	1px solid #D9D9D9;
+	border-radius: 15px;
+}
+
+.info_text {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.info_text p {
+	margin: 0 0 0 10px;
+}
+
+/********************* Accomodation forms *********************/
+
+section.main_section {
+	background-color: #F2F2F2;
+	width: 880px;
+	padding: 40px;
+	border-radius: 20px;
+	margin: 40px 0;
+}
+
+article.accomodation_item {
+	background-color: white;
+	border-radius: 20px;
+	width: 250px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0;
+}
+
+div.accomodation_image {
+	border-radius: 20px 20px 0px 0px;
+	height: 115px;
+	padding: 5px;
+}
+
+div.accomodation_text {
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+}
+
+div.accomodation_text * {
+	margin: 2px;
+}
+
+div.accomodation_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px 20px 0px 0px;
+}
+
+div.container_acc_items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
 /* Icons colors */
 
- .blue_star {
+.blue_star {
 	color: #0065FC;
 }
 
@@ -49,6 +281,6 @@ ul {
 	color: #F2F2F2;
 } 
 
-.fa-solid {
+.icon {
 	color: #0065FC;
-}
+} 

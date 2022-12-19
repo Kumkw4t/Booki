@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
 
-
+* {
+	box-sizing: border-box;
+}
 body {
 	padding: 0px 55px;
-	margin: 0;
+	margin: auto;
+	max-width: 1440px;
 }
 
 /********************* Font management *********************/
@@ -122,7 +125,7 @@ nav {
 
 form {
 	display: grid;
-	grid-template-columns: 50px 232px 50px 90px;
+	grid-template-columns: 50px 232px 140px;
 }
 
 form label {
@@ -149,7 +152,7 @@ form input {
 
 form button {
 	grid-column-start: 3;
-	grid-column-end: 5;
+	grid-column-end: 4;
 	background-color: #0065FC;
 	border-radius: 0 15px 15px 0;
 	border: none;
@@ -167,13 +170,13 @@ ul {
 
 /********************* Filters *********************/
 
-#filters, .filter_itemS, .filter_item {
+section.filters, .filter_itemS, .filter_item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-#filters {
+section.filters {
 	margin: 30px 0 40px 0;
 }
 
@@ -185,8 +188,13 @@ ul {
 	margin: 0 0 0 50px;
 }
 
+.filter_item:hover {
+	background-color: #DEEBFF;
+}
+
 p.filter_name {
 	margin: 0 0 0 10px;
+	white-space: nowrap;
 }
 
 article.filter_item i.icon {
@@ -219,14 +227,34 @@ article.filter_item i.icon {
 	margin: 0 0 0 10px;
 }
 
-/********************* Accomodation forms *********************/
+/********************* Acc + Popular management *********************/
+
+section.all_accomodations {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+a.item_link { /* also for filters' links */
+	display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+div.accomodation_text i.fa-star, div.pop_text i.fa-star {
+	margin: 0;
+}
+
+/********************* Accomodation *********************/
 
 section.main_section {
 	background-color: #F2F2F2;
-	width: 880px;
+	max-width: 880px;
 	padding: 40px;
 	border-radius: 20px;
 	margin: 40px 0;
+	margin-right: 10px;
 }
 
 article.accomodation_item {
@@ -236,7 +264,7 @@ article.accomodation_item {
 	height: 200px;
 	display: flex;
 	flex-direction: column;
-	margin: 15px 0;
+/*	margin: 15px auto;*/
 }
 
 div.accomodation_image {
@@ -252,7 +280,7 @@ div.accomodation_text {
 }
 
 div.accomodation_text * {
-	margin: 2px;
+	margin: 3px;
 }
 
 div.accomodation_image img {
@@ -268,10 +296,157 @@ div.container_acc_items {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	gap: 30px 20px;
 }
 
+h2.show_more {
+	margin: 35px 0 0 5px;
+}
 
-/* Icons colors */
+/********************* Populars *********************/
+
+section.popular_section {
+	background-color: #F2F2F2;
+	width: 420px;
+	padding: 40px;
+	border-radius: 20px;
+	margin: 40px 0;
+	margin-left: 10px;
+}
+
+div.pop_title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+div.pop_title i {
+	align-self: center;
+}
+
+div.container_pop_items {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px 0;
+}
+
+article.pop_item {
+	background-color: white;
+	border-radius: 20px;
+	width: 345px;
+	height: 145px;
+	display: flex;
+	flex-direction: row;
+}
+
+div.pop_image {
+	border-radius: 20px 20px 0px 0px;
+	width: 140px;
+	padding: 5px;
+}
+
+div.pop_image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px 0px 0px 20px;
+}
+
+div.pop_text {
+	max-width: 205px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	padding: 15px 22px 10px 15px;
+	height: 100%;
+}
+
+div.pop_text h2 {
+	overflow-wrap: normal;
+}
+
+div.pop_text div.stars {
+	margin-top: auto;
+}
+
+p.pop_price {
+	margin-bottom: auto;
+}
+
+div.pop_text * {
+	margin: 2px;
+}
+
+/********************* Activities *********************/
+
+section.activities {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 60px;
+}
+
+div.container_activities {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+article.activity_item {
+	width: 300px;
+	height: 445px;
+	border-radius: 20px;
+	box-shadow: 0px 6px 14px 1px rgba(0,0,0,0.05);
+	margin-bottom: 10px;
+}
+
+article.activity_item img {
+	width: 100%;
+	height: 390px;
+	object-fit: cover;
+	border-radius: 20px 20px 0px 0px;	
+}
+
+article.activity_item h2 {
+	margin-left: 20px;
+}
+
+/********************* Footer *********************/
+
+footer {
+	background-color: #F2F2F2;
+	display: flex;
+	flex-direction: row;
+	padding: 45px 70px;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: column;
+	margin-right: 230px;
+}
+
+footer ul:last-child {
+	margin-right: auto;
+}
+
+li.list_title {
+	margin: 20px 0;
+}
+
+li.list_item {
+	margin-top: 15px;
+}
+
+a.footer-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/********************* Icon Colors *********************/
 
 .blue_star {
 	color: #0065FC;
@@ -284,3 +459,236 @@ div.container_acc_items {
 .icon {
 	color: #0065FC;
 } 
+
+.fa-magnifying-glass {
+	color: #FFFFFF;
+}
+
+/********************* Tablette *********************/
+
+@media (max-width: 992px) {
+
+	.filter_item {
+		margin: 10px 0 0 20px;
+	}
+
+	div.filter_itemS {
+		flex-wrap: wrap;
+	}
+
+	section.all_accomodations {
+		flex-direction: column;
+	}
+
+	section.popular_section {
+		max-width: 880px;
+		width: initial;
+	}
+
+	div.container_pop_items {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	article.pop_item {
+		width: 250px;
+	}
+
+	div.pop_image {
+		width: 105px;
+	}
+
+	div.pop_text {
+		max-width: 145px;
+		padding: 12px 5px 12px 6px;
+	}
+
+	section.popular_section p {
+		font-size: 13px;
+		line-height: 15px;	
+	}
+
+	article.activity_item {
+		width: 180px;
+		height: 270px;
+	}
+
+	article.activity_item img {
+		width: 100%;
+		height: 210px;
+	}
+
+	footer ul {
+		display: flex;
+		flex-direction: column;
+		margin-right: 80px;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	body {
+		padding: 0;
+	}
+
+	/********** Header **********/
+
+	header {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+
+	div#logo {
+		width: 100%;
+		text-align: center;
+	}
+
+	#logo img {
+		margin: 20px 0 50px 0;
+	}
+
+	nav {
+		width: 100%;
+		margin-top: 0;
+		text-align: center;
+	}
+
+	div.menu_cat {
+		border-bottom: 3px solid #F2F2F2;
+		width: 100%;
+		padding: 0 0 25px 0;
+	}
+
+	div.menu_cat:hover {
+		border-bottom: 3px solid #0065FC;
+		border-top: none;
+		padding-top: 0;
+	}
+
+	/********** Top Section **********/
+
+	div.top_section {
+		padding: 0 20px;
+	}
+
+	div.research_bar {
+		width: 100%;
+	}
+
+	form.mobile_research_bar {
+		display: grid;
+		grid-template-columns: 50px auto 50px;
+	}
+
+	form.default_research_bar {
+		display: none;
+	}
+
+	section.filters {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	div.filter_itemS {
+		gap: 17px 14px;
+		justify-content: space-between;
+	}
+	a.filter_link {
+		width: 48%;
+	}
+
+	article.filter_item {
+		margin: 0;
+	}
+
+	/********** Populars **********/
+
+	section.popular_section {
+		order: -1;
+		margin: 40px 0 0 0;
+		border-radius: 0;
+		padding: 20px 20px 50px 20px;
+	}
+
+	div.container_pop_items {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	a.pop_link {
+		width: 100%;
+	}
+
+	article.pop_item {
+		width: 100%;
+	}
+
+	div.pop_image {
+		width: 40%;
+	}
+
+	div.pop_text {
+		max-width: 60%;
+	}
+
+	/********** Accomodations **********/
+
+	section.main_section {
+		background-color: #FFFFFF;
+		padding: 0 20px;
+		margin: 0 0 80px 0;
+	}
+
+	div.container_acc_items {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	a.acc_link {
+		width: 100%;
+	}
+
+	article.accomodation_item {
+		box-shadow: 0px 6px 14px 1px rgba(0,0,0,0.05);
+		width: 100%;
+	}
+
+	h2.show_more {
+		display: none;
+	}
+
+	/********** Activities **********/
+
+	section.activities {
+		padding: 0 20px;
+		margin-bottom: 80px;
+	}
+
+	div.container_activities {
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	a.activity_link {
+		width: 100%;
+	}
+
+	article.activity_item {
+		width: 100%;
+	}
+
+	/********** Footer **********/
+
+	footer {
+		flex-direction: column;
+		gap: 40px;
+		padding: 45px 30px;
+	}
+}

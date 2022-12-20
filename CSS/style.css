@@ -164,7 +164,7 @@ ul {
 	padding: 0;
 }
 
-.mobile_research_bar {
+button.mobile_button {
 	display: none;
 }
 
@@ -486,10 +486,7 @@ a.footer-link {
 	}
 
 	div.container_pop_items {
-		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
 		flex-wrap: wrap;
 		gap: 20px;
 	}
@@ -523,8 +520,6 @@ a.footer-link {
 	}
 
 	footer ul {
-		display: flex;
-		flex-direction: column;
 		margin-right: 80px;
 	}
 
@@ -583,13 +578,17 @@ a.footer-link {
 		width: 100%;
 	}
 
-	form.mobile_research_bar {
+	form.default_research_bar {
 		display: grid;
 		grid-template-columns: 50px auto 50px;
 	}
 
-	form.default_research_bar {
+	button.default_button {
 		display: none;
+	}
+	
+	button.mobile_button {
+		display: initial;
 	}
 
 	section.filters {

@@ -114,7 +114,7 @@ nav {
 
 /********************* Research Bar *********************/
 
-form {
+form.default_research_bar {
 	display: grid;
 	grid-template-columns: 50px 232px 140px;
 }
@@ -568,7 +568,6 @@ a.footer-link {
 	}
 
 	form.default_research_bar {
-		display: grid;
 		grid-template-columns: 50px auto 50px;
 	}
 
@@ -610,11 +609,7 @@ a.footer-link {
 		gap: 10px;
 	}
 
-	a.pop_link {
-		width: 100%;
-	}
-
-	article.pop_item {
+	a.pop_link, article.pop_item {
 		width: 100%;
 	}
 
@@ -664,11 +659,7 @@ a.footer-link {
 		gap: 25px;
 	}
 
-	a.activity_link {
-		width: 100%;
-	}
-
-	article.activity_item {
+	a.activity_link, article.activity_item {
 		width: 100%;
 	}
 

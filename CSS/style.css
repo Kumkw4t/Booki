@@ -23,7 +23,7 @@ h1 {
 	line-height: 26px;
 }
 
-.filter_title, .list_title, input {
+.filter_title, .list_title, input, form button {
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;	
@@ -62,16 +62,7 @@ h2 {
 }
 
 form button {
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 21px;
 	color: #FFFFFF;
-}
-
-.filter_name {
-	font-weight: 700;
-	font-size: 17px;
-	line-height: 20px;
 }
 
 /********************* Header *********************/

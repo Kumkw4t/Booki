@@ -17,48 +17,41 @@ body {
 	color: #000000;	
 }
 
-h1 {
+h1, h2 {
 	font-weight: 700;
 	font-size: 22px;
-	line-height: 26px;
 }
 
 .filter_title, .list_title, input, form button {
 	font-weight: 700;
 	font-size: 18px;
-	line-height: 21px;	
 }
 
 .fitler_name {
 	font-weight: 700;
 	font-size: 17px;
-	line-height: 20px;
 }
 
 .item_price {
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 16px;	
 }
 
 .list_item, p {
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 19px;
 }
 
-h2 {
+h3 {
 	font-weight: 700;
 	font-size: 16px;
-	line-height: 19px;	
 }
 
 .nav_categorie {
 	color: #000000;
 	font-weight: 500;
 	font-size: 16px;
-	line-height: 19px;
-	text-decoration: none;		
+	text-decoration: none;
 }
 
 form button {
@@ -559,7 +552,7 @@ a.footer-link {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Mobile */
 
 	body {
 		padding: 0;
@@ -614,6 +607,11 @@ a.footer-link {
 
 	form.default_research_bar {
 		grid-template-columns: 50px auto 50px;
+		width: 100%;
+	}
+
+	form input {
+		min-width:100%
 	}
 
 	button.default_button {
@@ -715,4 +713,15 @@ a.footer-link {
 		gap: 40px;
 		padding: 45px 30px;
 	}
+}
+
+@media (max-width: 480px) {
+
+	article.filter_item i.icon, article.filter_item * {
+		font-size: 3vw;
+	}
+
+	div.filter_itemS {
+  		gap: 10px;
+  	}
 }

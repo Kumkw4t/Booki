@@ -627,7 +627,7 @@ a.footer-link {
 		display: initial;
 	}
 
-	section.filters {S
+	section.filters {
 		flex-direction: column;
 		align-items: flex-start;
 	}
